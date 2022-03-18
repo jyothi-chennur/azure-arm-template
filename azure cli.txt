@@ -6,3 +6,9 @@ az deployment group create --resource-group Learning --template-file storage_acc
 
 //AZ CLI command to use parameter file
 az deployment group create --resource-group Learning --template-file storage_account.json --parameters storage_account.parameters.test.json
+
+//AZ CLI command to deploy multiple resources in single template in complete mode
+az deployment group create --resource-group Learning --template-file .\multiservices_arm_template.json --parameters .\multiservices_arm_template.parameters.dev.json --mode complete
+
+//AZ CLI command to deploy multiple resources in single template in incremental mode
+az deployment group create --resource-group Learning --template-file .\multiservices_arm_template.json --parameters .\multiservices_arm_template.parameters.dev.json --mode incremental
