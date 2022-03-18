@@ -1,0 +1,8 @@
+// AZ CLI command to create app service
+az deployment group create --resource-group Learning --template-file app_service_arm_template.json
+
+// AZ CLI command to create storage account
+az deployment group create --resource-group Learning --template-file storage_account_arm_template.json
+
+//AZ CLI command to use parameter file
+az deployment group create --resource-group Learning --template-file storage_account.json --parameters storage_account.parameters.test.json
